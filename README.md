@@ -88,21 +88,18 @@ mika-ci-cd/
 ├───coverage
 └───.github
         workflows/ci.yml
+```
 
-Notas adicionales
+## Notas adicionales
 
 El proyecto usa ES Modules ("type": "module").
 
 Si Jest falla con require, asegurarse de que los imports estén en formato import.
 
 Babel está configurado para que Jest interprete ES Modules (babel.config.js con @babel/preset-env).
-
-
-
-```markdown
-# Informe de Implementación del Proyecto CI/CD
-
-## Resumen
+```
+```
+## Informe de Implementación del Proyecto CI/CD
 Este proyecto tiene como objetivo demostrar la integración continua (CI) y entrega continua (CD) usando Node.js y Express. Incluye pruebas automatizadas con Jest, generación de cobertura de código y construcción de la aplicación.
 
 ## Configuración del proyecto
@@ -130,3 +127,4 @@ Este proyecto tiene como objetivo demostrar la integración continua (CI) y entr
 
 ## Conclusión
 El proyecto cumple con los objetivos de la práctica: automatización de tests, cobertura de código y pipeline CI/CD funcional en GitHub Actions.
+```
