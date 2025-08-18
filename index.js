@@ -6,6 +6,9 @@ app.get("/", (req, res) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Servidor corriendo en http://localhost:${port}`));
+
+if (process.env.NODE_ENV !== "test") { // No iniciar servidor durante tests
+  app.listen(port, () => console.log(`Servidor corriendo en http://localhost:${port}`));
+}
 
 module.exports = app;

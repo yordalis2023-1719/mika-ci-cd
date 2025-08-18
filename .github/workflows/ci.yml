@@ -15,11 +15,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      # Paso 1.5: Verificar archivos en el runner
+      - name: List files
+        run: ls -la
+
       # Paso 2: Instalar Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Cambia a tu versión si es diferente
+          node-version: '18'
 
       # Paso 3: Instalar dependencias
       - name: Install dependencies
@@ -29,6 +33,6 @@ jobs:
       - name: Run tests
         run: npm test
 
-      # Paso 5 (opcional): Iniciar servidor (solo si quieres probar que corre)
+      # Paso 5 (opcional): Iniciar servidor
       # - name: Start server
       #   run: npm run dev
