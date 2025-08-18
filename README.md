@@ -96,3 +96,37 @@ El proyecto usa ES Modules ("type": "module").
 Si Jest falla con require, asegurarse de que los imports estén en formato import.
 
 Babel está configurado para que Jest interprete ES Modules (babel.config.js con @babel/preset-env).
+
+
+
+```markdown
+# Informe de Implementación del Proyecto CI/CD
+
+## Resumen
+Este proyecto tiene como objetivo demostrar la integración continua (CI) y entrega continua (CD) usando Node.js y Express. Incluye pruebas automatizadas con Jest, generación de cobertura de código y construcción de la aplicación.
+
+## Configuración del proyecto
+- Se configuró el proyecto para usar ES Modules (`"type": "module"`).
+- Se movió `index.js` a la carpeta `src` para poder construir la aplicación en `dist`.
+- Se instalaron dependencias de desarrollo: `jest`, `supertest`, `nodemon`, `@babel/core`, `@babel/preset-env`, `babel-jest`.
+
+## Pipeline CI/CD
+- El workflow de GitHub Actions (`.github/workflows/ci.yml`) realiza:
+  1. Instalación de dependencias (`npm install`)
+  2. Ejecución de tests y cobertura (`npm run test:ci`)
+  3. Construcción de la aplicación (`npm run build`)
+- Se verificó que el pipeline se ejecuta correctamente en GitHub Actions.
+
+## Pruebas
+- Se implementó un test básico en `tests/app.test.js` para verificar que la aplicación responde correctamente.
+- La cobertura de código se genera en `coverage/lcov-report/index.html`.
+
+## Build
+- La construcción copia los archivos de `src` a `dist` usando el script `npm run build`.
+
+## Observaciones
+- Es importante mantener Babel configurado correctamente para soportar ES Modules en los tests.
+- Se recomienda incluir evidencia del pipeline ejecutándose en GitHub Actions mediante capturas o video.
+
+## Conclusión
+El proyecto cumple con los objetivos de la práctica: automatización de tests, cobertura de código y pipeline CI/CD funcional en GitHub Actions.
